@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
     private float nextFireTime;
     private PlayerInput playerInput;
     private InputAction moveAction;
-    
+    private InputAction shootAction;
+
     void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         {
             playerInput.actions.Enable();
             moveAction = playerInput.actions["Move"];
+            shootAction = playerInput.actions["Shoot"];
         }
     }
     
@@ -57,8 +59,9 @@ public class PlayerController : MonoBehaviour
         
         transform.position = newPosition;
     }
-    
     void HandleShooting()
+{
+    if (shootAction != null && shootAction.WasPressedThisFrame())
     {
         if (Time.time >= nextFireTime)
         {
@@ -66,6 +69,9 @@ public class PlayerController : MonoBehaviour
             nextFireTime = Time.time + fireRate;
         }
     }
+
+        }
+
     
     void Shoot()
     {
