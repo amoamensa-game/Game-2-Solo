@@ -86,8 +86,9 @@ public class PlayerController : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
     
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("hit");
         if (collision.gameObject.CompareTag("Enemy"))
         {
             if (GameManager.Instance != null)
@@ -97,4 +98,6 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+   
 }

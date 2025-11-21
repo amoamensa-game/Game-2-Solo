@@ -28,6 +28,15 @@ public class GameManager : MonoBehaviour
             return;
         }
     }
+
+        void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartGame();
+        }
+    }
+
     
     void Start()
     {
