@@ -253,5 +253,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a305299f5f6c5ee4a84cb995f564e892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  fallSpeed: 2
+  fallSpeed: 4
   rotationSpeed: 50

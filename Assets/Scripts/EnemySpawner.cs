@@ -30,16 +30,17 @@ public class EnemySpawner : MonoBehaviour
     }
     
     void SpawnEnemy()
+{
+    if (enemyPrefab != null)
     {
-        if (enemyPrefab != null)
-        {
-            float randomX = Random.Range(minX, maxX);
-            Vector3 spawnPosition = new Vector3(randomX, spawnY, 0f);
-            
-            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-            
-            float randomScale = Random.Range(minScale, maxScale);
-            enemy.transform.localScale = Vector3.one * randomScale;
-        }
+        float[] spawnXPositions = { -1.5f, 0f, 1.5f };
+        float randomX = spawnXPositions[Random.Range(0, spawnXPositions.Length)];
+        Vector3 spawnPosition = new Vector3(randomX, spawnY, 0f);
+        
+        GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        
+        float randomScale = Random.Range(minScale, maxScale);
+        enemy.transform.localScale = Vector3.one * randomScale;
     }
+}
 }
