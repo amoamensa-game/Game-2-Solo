@@ -772,7 +772,7 @@ RectTransform:
   m_GameObject: {fileID: 656401600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 496261140}
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6698113, g: 0.072668225, b: 0.072668225, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -992,8 +992,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -7.09, z: 0}
-  m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.3, y: 0.2, z: 0.15}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 801662992}
   m_Father: {fileID: 0}
@@ -1644,6 +1644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   maxLives: 3
+  backgroundMusic: {fileID: 928676919}
 --- !u!4 &1997481443
 Transform:
   m_ObjectHideFlags: 0
@@ -1825,8 +1826,8 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 795797034}
+  - {fileID: 1881305297}
   - {fileID: 1997481443}
   - {fileID: 1338633725}
-  - {fileID: 1881305297}
   - {fileID: 1140580249}
   - {fileID: 928676920}

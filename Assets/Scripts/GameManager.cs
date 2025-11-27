@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
     
     [Header("Game Settings")]
     public int maxLives = 3;
-    
+    [Header("Audio")]
+    public AudioSource backgroundMusic;
+
     private int currentLives;
     private int score;
     private bool gameOver;
@@ -63,6 +65,19 @@ public class GameManager : MonoBehaviour
         currentLives--;
         OnLivesChanged?.Invoke(currentLives);
         
+        void GameOver()
+{
+    gameOver = true;
+    
+    if (backgroundMusic != null)
+    {
+        backgroundMusic.Stop();
+    }
+    
+    OnGameOverEvent?.Invoke();
+    Debug.Log($"Game Over! Final Score: {score}");
+}
+
         if (currentLives <= 0)
         {
             GameOver();
