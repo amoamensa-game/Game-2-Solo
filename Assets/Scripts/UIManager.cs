@@ -8,7 +8,9 @@ public class UIManager : MonoBehaviour
     public Text scoreText;
     public Text livesText;
     public GameObject gameOverPanel;
+    // public GameObject StartPanel;
     public Text finalScoreText;
+
     public Button restartButton;
     
     void Start()
@@ -80,4 +82,9 @@ public class UIManager : MonoBehaviour
             GameManager.Instance.OnGameOverEvent -= ShowGameOver;
         }
     }
+
+    // public void StartGame()
+    // {
+        
+    // }
 }
